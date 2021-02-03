@@ -4,10 +4,10 @@ import requests
 from bs4 import BeautifulSoup
 
 os.system("clear")
-# repl에 돌릴경우 제대로 나옴
+
 
 def write_company(company):
-    file = open(f"{company['name']}.csv", mode="w")
+    file = open(f"Applications/알바천국scrape/알바천국_result/{company['name']}.csv", mode="w")
     writer = csv.writer(file)
     writer.writerow(["place", "title", "time", "pay", "date"])
     for job in company["jobs"]:
